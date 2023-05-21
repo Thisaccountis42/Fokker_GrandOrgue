@@ -1,0 +1,59 @@
+Instructions for setting up the Fokker Organ Emulator for GrandOrgue
+
+If you do not already have GrandOrgue, install it now.
+
+Step 1: Loading the Organ
+
+The first step is to load the organ. If you are on Windows, you can double click on 
+or open the Fokker_Organ.organ file with GrandOrgue, which will load the Fokker Organ Emulator.
+If you can't do that, open GrandOrgue and go to the toolbar. Go to File -> Open, and load the Fokker_Organ.organ
+file provided in the folder. This should load the emulator. 
+
+Step 2 (Optional): Checking Everything Works/Troubleshooting
+
+Once the sampleset is loaded, go to Audio/Midi -> Organ Settings, and you should see an 
+options window with a smaller window that has a tree view that shows the different manuals of the organ, 
+the stops associated with each manual, and the wave samples (.wav files) associated with each stop.
+For now, the only visible manual should be "Pedal 1." Next, scroll down in the smaller window until 
+you see "Pedal 2." Click on "Pedal 2" (not the small minus sign next to it), and look at the settings. 
+If the Tuning (Cent) value is 38.709702, then that means the right settings for the organ are loaded.
+In that case, go to Step 3.
+
+If the Tuning (Cent) value for Pedal 2 is 0.00000, then go to File -> Import Settings, and choose the "31-tet.cmb"
+file provided in the folder. This should load the right settings, but to make sure, check "Pedal 2" again to make sure.
+
+Step 3 (Optional): Checking Everything Works/Troubleshooting cot'd
+
+Go to Audio/Midi -> Temperament and check if the current selected temperament is "31-tet."
+If it is selected, you're good to go. If it isn't selected, and there is a 31-tet option, select it and you're good to go.
+
+If there isn't a 31-tet option in Audio/Midi -> Temperament, then go to File -> Settings... -> Temperaments 
+(you might need to use the arrows in the top right of the settings window to get there), and click on the "Add" button.
+Then, input the following values:
+c: 9.677
+c#: -12.904
+d: 3.225
+d#: 19.355
+e: -3.226
+f: 12.903
+f#: -9.678
+g: 6.452
+g#: -16.129
+a: 0.000 (you might not have to change this one)
+a#: 16.129
+b: -6.452
+
+Then, go to Audio/Midi -> Temperament and select the temperament you just made.
+After that, everything should be working. If you want to save this state, go to File -> Save,
+and the settings and temperament should be saved for future use.
+
+Step 4: Playing
+
+To set up MIDI settings for inputting to the emulator, 
+right click on any of the stops or keyboards to set up the
+settings for them. You can also go to File -> Settings... -> MIDI Devices
+to set things up further.
+
+Tip: each "manual" has 3 seperate stops for a pipe rank, but you can
+assign them to the same MIDI event/keyboard shortcut so you can activate them
+or deactivate them at the same time.
